@@ -19,7 +19,7 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./src-sw.js",
+        template: "./index.html",
         title: "JATE"
       }),
       new InjectManifest({
@@ -56,7 +56,7 @@ module.exports = () => {
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
               presets: ["@babel/preset-env"],
               plugins: [
